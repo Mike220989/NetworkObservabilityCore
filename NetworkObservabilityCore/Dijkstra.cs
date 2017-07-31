@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using PriorityQueue;
 
 namespace NetworkObservabilityCore
 {
@@ -11,6 +10,11 @@ namespace NetworkObservabilityCore
 		private int[] prev;
         private IComparer<AuxNode<int, INode>> comparer;
 		Dictionary<INode, int> dict;
+
+		public Dijkstra(IGraph graph, INode src)
+			: this(graph, src, Comparer<AuxNode<double, int>>.Default)
+		{
+		}
 
 		public Dijkstra(IGraph g, INode src, IComparer<AuxNode<double, int>> comp)
 		{
@@ -86,7 +90,7 @@ namespace NetworkObservabilityCore
 
 		#region AuxiliaryClass
 
-		private class AuxNode<TKey, TItem> : IComparable<AuxNode<TKey, TItem>>
+		public class AuxNode<TKey, TItem> : IComparable<AuxNode<TKey, TItem>>
 			//, IEquatable<AuxNode<TKey, TItem>> 
 			where TKey : IComparable<TKey>
 		{
