@@ -21,7 +21,7 @@ namespace NetworkObservabilityCore
 		public String Label
 		{
 			get;
-			protected set;
+			set;
 		}
 
 		public HashSet<IEdge> Links

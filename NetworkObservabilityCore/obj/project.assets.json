@@ -3708,10 +3708,10 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\documents\\visual studio 2017\\Projects\\NetworkObservabilityCore\\NetworkObservabilityCore\\NetworkObservabilityCore.csproj",
+      "projectUniqueName": "C:\\Users\\user\\Documents\\Visual Studio 2017\\Projects\\NetworkObservabilityCore\\NetworkObservabilityCore\\NetworkObservabilityCore.csproj",
       "projectName": "NetworkObservabilityCore",
-      "projectPath": "C:\\Users\\user\\documents\\visual studio 2017\\Projects\\NetworkObservabilityCore\\NetworkObservabilityCore\\NetworkObservabilityCore.csproj",
-      "outputPath": "C:\\Users\\user\\documents\\visual studio 2017\\Projects\\NetworkObservabilityCore\\NetworkObservabilityCore\\obj\\",
+      "projectPath": "C:\\Users\\user\\Documents\\Visual Studio 2017\\Projects\\NetworkObservabilityCore\\NetworkObservabilityCore\\NetworkObservabilityCore.csproj",
+      "outputPath": "C:\\Users\\user\\Documents\\Visual Studio 2017\\Projects\\NetworkObservabilityCore\\NetworkObservabilityCore\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netstandard1.4"
