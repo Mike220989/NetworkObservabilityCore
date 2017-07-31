@@ -8,20 +8,20 @@ namespace NetworkObservabilityCore
 		readonly List<INode> nodes;
 		private double[] dist;
 		private int[] prev;
-		private Comparison<AuxNode<double, int>> compare;
+		//private Comparison<AuxNode<double, int>> compare;
 		Dictionary<INode, int> dict;
 
 		public Dijkstra(IGraph graph, INode src)
-			: this(graph, src, Comparer<AuxNode<double, int>>.Default)
+			//: this(graph, src, Comparer<AuxNode<double, int>>.Default)
 		{
 		}
 
 		public Dijkstra(IGraph g, INode src, IComparer<AuxNode<double, int>> comp)
 		{
-			compare = comp.Compare;
+			//compare = comp.Compare;
 			List<AuxNode<double, int>> auxNodes = new List<AuxNode<double, int>>();
 			nodes = new List<INode>(g.AllNodes);
-			var pq = new PriorityQueue<AuxNode<double, int>>(nodes.Count, comp.Compare);
+            var pq = new PriorityQueue<AuxNode<double, int>>(nodes.Count);//, comp.Compare);
 			dict = Dictionarize(nodes);
 			dist = new double[nodes.Count];
 			prev = new int[nodes.Count];
@@ -52,7 +52,7 @@ namespace NetworkObservabilityCore
 				{
 					var idxFrom = dict[edge.From];
 					var idxTo = dict[edge.To];
-					var newDist = dist[idxFrom] + edge.Weight;
+                    var newDist = dist[idxFrom] + edge.Value;// Weight;
 					if (newDist < dist[idxTo])
 					{
 						dist[idxTo] = newDist;
@@ -97,8 +97,9 @@ namespace NetworkObservabilityCore
 		{
 			public TKey Weight { get; set; }
 			public TItem Item { get; set; }
+            public static bool maxPriority = false;
 
-			public AuxNode(TKey weight, TItem item)
+            public AuxNode(TKey weight, TItem item)
 			{
 				Weight = weight;
 				Item = item;
@@ -106,6 +107,9 @@ namespace NetworkObservabilityCore
 			
 			int IComparable<AuxNode<TKey, TItem>>.CompareTo(AuxNode<TKey, TItem> other)
 			{
+                if (maxPriority)
+                return (other.Weight).CompareTo(Weight);
+                else
 				return Weight.CompareTo(other.Weight);
 			}
 
@@ -121,3 +125,12 @@ namespace NetworkObservabilityCore
 		#endregion
 	}
 }
+
+
+//eventHandler (sender, object)
+
+//    getName temp = (Attribute)(object[0]) //object[0] = cost
+//    foreach (edge in g.edgeList)
+//        edge.Value = edge.getAttribute(temp);
+//    if (object[1].source == max) maxPriority = true;
+//    Fireup Dijkstra

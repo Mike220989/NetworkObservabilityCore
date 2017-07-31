@@ -3703,15 +3703,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\user\\.nuget\\packages\\": {}
+    "C:\\Users\\musta\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\Documents\\Visual Studio 2017\\Projects\\NetworkObservabilityCore\\NetworkObservabilityCore\\NetworkObservabilityCore.csproj",
+      "projectUniqueName": "D:\\QUT\\2017\\IFB398 - Capstone Project (Phase 1)\\Project\\royce\\extended\\NetworkObservabilityCore\\NetworkObservabilityCore\\NetworkObservabilityCore.csproj",
       "projectName": "NetworkObservabilityCore",
-      "projectPath": "C:\\Users\\user\\Documents\\Visual Studio 2017\\Projects\\NetworkObservabilityCore\\NetworkObservabilityCore\\NetworkObservabilityCore.csproj",
-      "outputPath": "C:\\Users\\user\\Documents\\Visual Studio 2017\\Projects\\NetworkObservabilityCore\\NetworkObservabilityCore\\obj\\",
+      "projectPath": "D:\\QUT\\2017\\IFB398 - Capstone Project (Phase 1)\\Project\\royce\\extended\\NetworkObservabilityCore\\NetworkObservabilityCore\\NetworkObservabilityCore.csproj",
+      "outputPath": "D:\\QUT\\2017\\IFB398 - Capstone Project (Phase 1)\\Project\\royce\\extended\\NetworkObservabilityCore\\NetworkObservabilityCore\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netstandard1.4"

@@ -8,9 +8,10 @@ namespace NetworkObservabilityCore
     {
 		private static int idIndex = 0;
 		private readonly String id;
+        public List<Attribute> attributes;
 
-		#region Property
-		public String Id => id;
+        #region Property
+        public String Id => id;
 
 		public String Label
 		{
@@ -18,11 +19,11 @@ namespace NetworkObservabilityCore
 			set;
 		}
 
-		public int Weight
-		{
-			get;
-			set;
-		}
+		//public int Weight
+		//{
+		//	get;
+		//	set;
+		//}
 
 		public INode From
 		{
@@ -68,5 +69,7 @@ namespace NetworkObservabilityCore
 		{
 			return other is Edge && Equals(other);
 		}
-	}
+
+        public double Value { get; set; }
+    }
 }
