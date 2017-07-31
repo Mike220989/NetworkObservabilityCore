@@ -8,7 +8,7 @@ namespace NetworkObservabilityCore
 		readonly List<INode> nodes;
 		private double[] dist;
 		private int[] prev;
-        private IComparer<AuxNode<int, INode>> comparer;
+		private Comparison<AuxNode<double, int>> compare;
 		Dictionary<INode, int> dict;
 
 		public Dijkstra(IGraph graph, INode src)
@@ -18,6 +18,7 @@ namespace NetworkObservabilityCore
 
 		public Dijkstra(IGraph g, INode src, IComparer<AuxNode<double, int>> comp)
 		{
+			compare = comp.Compare;
 			List<AuxNode<double, int>> auxNodes = new List<AuxNode<double, int>>();
 			nodes = new List<INode>(g.AllNodes);
 			var pq = new PriorityQueue<AuxNode<double, int>>(nodes.Count, comp.Compare);
