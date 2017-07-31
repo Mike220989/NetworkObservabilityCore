@@ -19,13 +19,13 @@ namespace NetworkObservabilityCore
 			set;
 		}
 
-		//public int Weight
-		//{
-		//	get;
-		//	set;
-		//}
+        public int Weight
+        {
+            get;
+            set;
+        }
 
-		public INode From
+        public INode From
 		{
 			get;
 			set;
