@@ -10,16 +10,17 @@ namespace NetworkObservabilityCore
 		where EType : IEdge
     {
 
+
 		public HashSet<INode> AllNodes
 		{
 			get;
-			private set;
+			internal set;
 		}
 
 		public HashSet<IEdge> AllEdges
 		{
 			get;
-			private set;
+			internal set;
 		}
 
 		public int Count => AllNodes.Count;
