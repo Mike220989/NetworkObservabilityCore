@@ -68,5 +68,10 @@ namespace NetworkObservabilityCore
 		{
 			return other is Edge && Equals(other);
 		}
+
+		public static void SetIdStartFrom(int index)
+		{
+			idIndex = index;
+		}
 	}
 }
