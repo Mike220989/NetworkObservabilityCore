@@ -75,5 +75,10 @@ namespace NetworkObservabilityCore
 		{
 			return other is Node && Equals(other);
 		}
+
+		public static void SetIdStartFrom(int index)
+		{
+			idIndex = index;
+		}
 	}
 }
