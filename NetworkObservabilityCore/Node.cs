@@ -12,12 +12,6 @@ namespace NetworkObservabilityCore
 		#region Property
 		public String Id => id;
 
-		public String Name
-		{
-			get;
-			set;
-		}
-
 		public String Label
 		{
 			get;
@@ -42,15 +36,22 @@ namespace NetworkObservabilityCore
 			set;
 		}
 
+		public String Type
+		{
+			get;
+			set;
+		}
+
 		#endregion
 
 		#region Constructors
-		public Node() : this("BasicNode") { }
+		public Node() : this("Node") { }
 
-		public Node(String label)
+		public Node(String type)
 		{
 			id = String.Format("N{0:0000000}", idIndex++);
-			Label = label;
+			Label = id;
+			Type = type;
 			Links = new HashSet<IEdge>();
 			IsObserver = IsObserverInclusive = false;
 		}

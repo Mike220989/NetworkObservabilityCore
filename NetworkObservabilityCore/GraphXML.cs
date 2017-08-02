@@ -43,26 +43,24 @@ namespace NetworkObservabilityCore
 
 		private XElement CreateXElement(INode node)
 		{
-			XElement xelement = new XElement("Node", new XAttribute("Id", node.Id));
+			XElement xelement = new XElement("Node", new XAttribute("Id", node.Id), new XAttribute("Type", node.Type));
 
 			var isObserver = new XElement("IsObserver", node.IsObserver);
 			var isObserverInclusive = new XElement("IsObserverInclusive", node.IsObserverInclusive);
 			var label = new XElement("Label", node.Label);
 			var links = CreateSubXElement(node.Links);
-			var name = new XElement("Name", node.Name);
 
 			xelement.Add(isObserver);
 			xelement.Add(isObserverInclusive);
 			xelement.Add(label);
 			xelement.Add(links);
-			xelement.Add(name);
 
 			return xelement;
 		}
 
 		private XElement CreateXElement(IEdge edge)
 		{
-			XElement xelement = new XElement("Edge", new XAttribute("Id", edge.Id));
+			XElement xelement = new XElement("Edge", new XAttribute("Id", edge.Id), new XAttribute("Type", edge.Type));
 
 			var from = new XElement("From", edge.From);
 			var label = new XElement("Label", edge.Label);

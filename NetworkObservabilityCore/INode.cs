@@ -8,7 +8,7 @@ namespace NetworkObservabilityCore
 	{
 		String Id { get; }
 
-		String Name { get; set; }
+		String Type { get; set; }
 
 		String Label { get; }
 

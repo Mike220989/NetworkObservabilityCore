@@ -8,6 +8,8 @@ namespace NetworkObservabilityCore
 	{
 		String Id { get; }
 
+		String Type { get; set; }
+
 		String Label { get; set; }
 
 		INode From { get; set; }

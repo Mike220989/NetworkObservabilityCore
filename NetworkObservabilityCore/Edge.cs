@@ -18,6 +18,12 @@ namespace NetworkObservabilityCore
 			set;
 		}
 
+		public String Type
+		{
+			get;
+			set;
+		}
+
 		public int Weight
 		{
 			get;
@@ -39,12 +45,13 @@ namespace NetworkObservabilityCore
 		#endregion
 
 		#region Constructors
-		public Edge(int weight) : this(weight, "BasicEdge") { }
+		public Edge(int weight) : this(weight, "Edge") { }
 
-		public Edge(int weight, String label)
+		public Edge(int weight, String type)
 		{
 			id = String.Format("E{0:00000000}", idIndex++);
-			Label = label;
+			Label = id;
+			Type = type;
 			Weight = weight;
 		}
 		#endregion
